@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seply.cz - Servis plynových zařízení</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display: flex; align-items: center;">
+                <a href="index.html" class="logo">Seply.cz</a>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+            <ul id="nav-list">
+                <li><a href="cenik.html">Ceník</a></li>
+                <li><a href="o-firme.html">O firmě</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <a href="objednavka.html" class="order-button">Objednávka</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="overlay">
+            <header>
+                <h1>Seply.cz</h1>
+                <p>Servis a montáž vyhrazených plynových zařízení</p>
+                <a href="objednavka.html" class="btn">Objednávka služeb</a>
+            </header>
+            <a href="#why-choose" class="scroll-down">
+                <img src="images/arrow-down.png">
+            </a>
+        </div>
+    </div>
+    <section id="why-choose" class="why-choose">
+        <div class="container">
+            <h2>Proč si vybrat právě Seply.cz?</h2>
+            <div class="reasons">
+                <div class="reason">
+                    <h3>Spolehlivá služba</h3>
+                    <p>Jsem vyškolen a připraven na všechny problémy, což zajišťuje, že vaše zařízení bude co nejdříve opět funkční.</p>
+                </div>
+                <div class="reason">
+                    <h3>Kvalita a cena</h3>
+                    <p>Náš materiál je kvalitní a ceny jsou velmi příznivé, což zajišťuje, že vám kotel dlouho vydrží bez závad.</p>
+                </div>
+                <div class="reason">
+                    <h3>Profesionalita a zkušenosti</h3>
+                    <p>Jsem vyškolen na kotle vysoké škály výrobců a mám dlouholeté zkušenosti s jejich instalací, údržbou a opravami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="brands">
+        <div class="container">
+            <h2>Na jaké značky se specializuji</h2>
+            <div class="brand-list">
+                <div class="brand">
+                    <img src="images/brand1-logo.png">
+                    <p>Protherm</p>
+                </div>
+                <div class="brand">
+                    <img src="images/brand2-logo.png">
+                    <p>Vaillant</p>
+                </div>
+                <div class="brand">
+                    <img src="images/brand3-logo.png">
+                    <p>Immergas</p>
+                </div>
+                <div class="brand">
+                    <img src="images/brand4-logo.png">
+                    <p>Enbra</p>
+                </div>
+                <div class="brand">
+                    <img src="images/brand5-logo.png">
+                    <p>Baxi</p>
+                </div>
+                <div class="brand">
+                    <img src="images/brand6-logo.png">
+                    <p>Wolf</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+    <p>&copy; <span id="year"></span> Seply.cz | Made by <a href="https://plojharsim.cz" target="_blank">plojharsim</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

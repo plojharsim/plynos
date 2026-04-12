@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceník - Seply.cz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display: flex; align-items: center;">
+                <a href="index.html" class="logo">Seply.cz</a>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+            <ul id="nav-list">
+                <li><a href="cenik.html">Ceník</a></li>
+                <li><a href="o-firme.html">O firmě</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <a href="objednavka.html" class="order-button">Objednávka</a>
+        </nav>
+    </header>
+<section class="pricing">
+    <div class="container">
+        <h2>Ceník služeb</h2>
+        <div class="pricing-category">
+            <h3>Uvedení do provozu</h3>
+            <table class="price-table">
+                <tr>
+                    <th class="column-1">Položka</th>
+                    <th class="column-2">Cena</th>
+                </tr>
+                <tr>
+                    <td class="column-1">Plynového kondenzačního kotle do 50 kW</td>
+                    <td class="column-2">1600,-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Plynové ohřívače (průtokové i akumulační)</td>
+                    <td class="column-2">1200,-</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pricing-category">
+            <h3>Servisní prohlídka</h3>
+            <table class="price-table">
+                <tr>
+                    <th class="column-1">Položka</th>
+                    <th class="column-2">Cena</th>
+                </tr>
+                <tr>
+                    <td class="column-1">Kondenzačního plynového spotřebiče do 50 kW ( typ C )</td>
+                    <td class="column-2">1500,-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Atmosférického plynového spotřebiče do 50 kW ( typ B )</td>
+                    <td class="column-2">1400,-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Plynové ohřívače (průtokové i akumulační)</td>
+                    <td class="column-2">1200,-</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pricing-category">
+            <h3>Opravy plynových spotřebičů</h3>
+            <table class="price-table">
+                <tr>
+                    <th class="column-1">Položka</th>
+                    <th class="column-2">Cena</th>
+                </tr>
+                <tr>
+                    <td class="column-1">Diagnostika závady</td>
+                    <td class="column-2">550,-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Každá započatá hodina</td>
+                    <td class="column-2">800,-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Příplatek za práci po pracovní době</td>
+                    <td class="column-2">+ 50%</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Příplatek za práci o víkendu a ve svátek</td>
+                    <td class="column-2">+100%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="pricing-category">
+            <h3>Dopravné a parkovné</h3>
+            <table class="price-table">
+                <tr>
+                    <th class="column-1">Položka</th>
+                    <th class="column-2">Cena</th>
+                </tr>
+                <tr>
+                    <td class="column-1">Město Příbram</td>
+                    <td class="column-2">250,-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Příbram + 20 Km</td>
+                    <td class="column-2">400.-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Příbram + 50 Km</td>
+                    <td class="column-2">800.-</td>
+                </tr>
+                <tr>
+                    <td class="column-1">Ostatní doprava</td>
+                    <td class="column-2">18.-/Km</td>
+                </tr>
+                <tr>
+                    <td class="column-1">parkovné v zóně</td>
+                    <td class="column-2">Dle zóny</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>&copy; <span id="year"></span> Seply.cz | Made by <a href="https://plojharsim.cz" target="_blank">plojharsim</a></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
