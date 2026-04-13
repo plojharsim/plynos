@@ -1,85 +1,38 @@
-const calendar = document.getElementById("calendar");
-const calendarTitle = document.getElementById("calendarTitle");
-const selectedDateInput = document.getElementById("selectedDate");
-
-let currentDate = new Date();
-let selectedDay = null;
-
-function renderCalendar(date) {
-    calendar.innerHTML = "";
-
-    const year = date.getFullYear();
-    const month = date.getMonth();
-
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-    const monthNames = [
-        "leden","únor","březen","duben","květen","červen",
-        "červenec","srpen","září","říjen","listopad","prosinec"
-    ];
-
-    calendarTitle.textContent = `${monthNames[month]} ${year}`;
-
-    // posun (po = 0)
-    let startDay = firstDay === 0 ? 6 : firstDay - 1;
-
-    for (let i = 0; i < startDay; i++) {
-        const empty = document.createElement("div");
-        calendar.appendChild(empty);
-    }
-
-    for (let day = 1; day <= daysInMonth; day++) {
-        const div = document.createElement("div");
-        div.textContent = day;
-        div.classList.add("day");
-
-        div.addEventListener("click", () => {
-            document.querySelectorAll(".day").forEach(d => d.classList.remove("selected"));
-            div.classList.add("selected");
-
-            selectedDay = `${year}-${month + 1}-${day}`;
-            selectedDateInput.value = selectedDay;
-        });
-
-        calendar.appendChild(div);
-    }
-}
-
-renderCalendar(currentDate);
-
-// FORM
 document.getElementById("reservationForm").addEventListener("submit", function(e) {
     e.preventDefault();
-
-    if (!selectedDay) {
-        document.getElementById("responseMessage").textContent = "Vyberte datum!";
+    if (this.brand.value === "Značka nebyla vybrána") {
+        document.getElementById("responseMessage").textContent = "Vyberte značku kotle!";
         document.getElementById("responseMessage").style.color = "red";
-        return;
+        return false;
     }
-
-    const data = {
-        date: selectedDay,
-        fullname: document.getElementById("fullname").value,
-        address: document.getElementById("address").value,
-        phone: document.getElementById("phone").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
+    const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const brand = document.getElementById("brand").value;
+    const time = document.getElementById("time").value;
+    const message = document.getElementById("message").value;
+    const formData = {
+        fullname: fullname,
+        email: email,
+        phone: phone,
+        brand: brand,
+        time: time,
+        message: message
     };
-
-    const scriptURL = ''; // sem pak dáš backend
-
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxVopxS5hQpjtoHvubiKmzEwRQ5zOGHRLPQRREghyIYhpg1sN5AW6YDXGoJTA1ekM_O/exec';  // Nahraďte vaší vlastní URL
     fetch(scriptURL, {
-        method: "POST",
-        body: new URLSearchParams(data)
+        method: 'POST',
+        body: new URLSearchParams(formData),
     })
-    .then(() => {
-        document.getElementById("responseMessage").textContent = "Objednávka odeslána!";
+    .then(response => response.text())
+    .then(result => {
+        document.getElementById("responseMessage").textContent = "Formulář byl úspěšně odeslán!";
         document.getElementById("responseMessage").style.color = "white";
         document.getElementById("reservationForm").reset();
     })
-    .catch(() => {
-        document.getElementById("responseMessage").textContent = "Chyba při odeslání.";
+    .catch(error => {
+        document.getElementById("responseMessage").textContent = "Chyba při odesílání formuláře. Zkuste to znovu.";
         document.getElementById("responseMessage").style.color = "red";
+        console.error("Error:", error);
     });
 });
