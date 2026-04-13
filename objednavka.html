@@ -34,6 +34,9 @@
             <label for="phone">Telefon:</label>
             <input type="tel" id="phone" name="phone" placeholder="+420 728 546 126" required>
 
+            <label for="adress">Adresa umístění plynového zařízení:</label>
+            <input type="text" id="adress" name="adress" placeholder="Dlouhá 154, Příbram" required>
+            
             <label for="brand">Značka kotle:</label>
             <select id="brand" name="brand">
                 <option value="Značka nebyla vybrána">Prosím vyberte značku kotle</option>
@@ -43,13 +46,16 @@
                 <option value="Enbra">Enbra</option>
                 <option value="Baxi">Baxi</option>
                 <option value="Wolf">Wolf</option>
-                <option value="Ostatní - prosím uveďte značku kotle v poznámce">Ostatní - prosím uveďte značku kotle v poznámce</option>
+                <option value="Baxi">Bosch</option>
+                <option value="Wolf">Junkers</option>
+                <option value="Ostatní - prosím uveďte značku kotle v požadavku">Ostatní - prosím uveďte značku kotle v poznámce</option>
             </select>
-            <label for="time">Preferovaný čas:</label>
-            <input type="text" id="time" name="time" placeholder="15:00" required>
+            
+            <label for="meeting">Závazný datum a čas:</label>
+            <input type="datetime-local" id="meeting" name="meeting" required>
 
-            <label for="message">Poznámka:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Vaše poznámka"></textarea>
+            <label for="request">Požadavek:</label>
+            <textarea id="request" name="request" rows="4" placeholder="Váš požadavek"></textarea>
             
             <button type="submit">Odeslat</button>
         </form>
