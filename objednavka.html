@@ -30,43 +30,9 @@
 
         <p><b>Upozornění:</b> Vámi vybraný čas se budeme snažit dodržet, ale není závazný.</p>
 
-        <form id="reservationForm">
-            <label for="fullname">Jméno a příjmení:</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Jakub Novák" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="jakubnovak@seznam.cz" required>
-            
-            <label for="phone">Telefon:</label>
-            <input type="tel" id="phone" name="phone" placeholder="+420 728 546 126" required>
-
-            <label for="adress">Adresa umístění plynového zařízení:</label>
-            <input type="text" id="adress" name="adress" placeholder="Dlouhá 154, Příbram" required>
-            
-            <label for="brand">Značka kotle:</label>
-            <select id="brand" name="brand">
-                <option value="Značka nebyla vybrána">Prosím vyberte značku kotle</option>
-                <option value="Protherm">Protherm</option>
-                <option value="Vaillant">Vaillant</option>
-                <option value="Immergas">Immergas</option>
-                <option value="Enbra">Enbra</option>
-                <option value="Baxi">Baxi</option>
-                <option value="Wolf">Wolf</option>
-                <option value="Baxi">Bosch</option>
-                <option value="Wolf">Junkers</option>
-                <option value="Ostatní - prosím uveďte značku kotle v požadavku">Ostatní - prosím uveďte značku kotle v poznámce</option>
-            </select>
-            
-            <label for="meeting">Závazný datum a čas:</label>
-            <input type="datetime-local" id="meeting" name="meeting" required>
-
-            <label for="request">Požadavek:</label>
-            <textarea id="request" name="request" rows="4" placeholder="Váš požadavek"></textarea>
-            
-            <button type="submit">Odeslat</button>
-        </form>
-        <p id="responseMessage"></p>
-    </section>
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ15SEpf4kLKiDPHfEQY94icnpG1HI22vdIJnmKQlWhpok7-vrBhl-uIvAFI8bGTpRgdT6DctQ4a?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+        <!-- end Google Calendar Appointment Scheduling -->
 <footer>
     <p>&copy; <span id="year"></span> Plynos.cz | Made by <a href="https://plojharsim.cz" target="_blank">plojharsim</a></p>
 </footer>
