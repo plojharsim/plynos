@@ -41,7 +41,8 @@ header nav ul {
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    margin-right: 200px;
+    margin-right: 320px;
+    margin-left: 60px;
 }
 
 header nav ul li {
@@ -60,6 +61,22 @@ header nav ul li a {
 header nav ul li a:hover {
     background-color: var(--blue-color);
     border-radius: 5px;
+}
+
+header nav .call-button {
+    position: absolute;
+    right: 175px;
+    padding: 10px 20px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+header nav .call-button:hover {
+    background: var(--blue-color);
 }
 
 header nav .order-button {
@@ -100,17 +117,18 @@ header nav .order-button:hover {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    padding-top: 8%;
+    padding-top: 2%;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+.hero-logo {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .btn {
@@ -133,7 +151,7 @@ header nav .order-button:hover {
     text-align: center;
 }
 
-.why-choose h2 {
+.why-choose h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -186,7 +204,7 @@ header nav .order-button:hover {
     text-align: center;
 }
 
-.brands h2 {
+.brands h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -237,7 +255,7 @@ header nav .order-button:hover {
     text-align: center;
 }
 
-.pricing h2 {
+.pricing h1 {
     font-size: 3rem;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -379,7 +397,7 @@ header nav .order-button:hover {
     text-align: center;
 }
 
-.company h2 {
+.company h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -451,7 +469,7 @@ header nav .order-button:hover {
     text-align: center;
 }
 
-.company-info h2 {
+.company-info h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -520,8 +538,12 @@ header nav .order-button:hover {
 
     header nav .logo {
         font-size: 2rem;
-        margin-right: 150px;
-        margin-left: 20px;
+        margin: 0;
+    }
+
+    header nav > div {
+        width: 100%;
+        justify-content: space-between;
     }
 
     header nav ul {
@@ -534,18 +556,31 @@ header nav .order-button:hover {
     
     header nav ul li a {
         font-size: 18px;
-        margin-left: 20px;
+        margin: 0;
     }
 
     header nav ul.show {
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        margin-left: 190px;
+        align-items: center;
+        width: 100%;
+        margin: 20px 0 10px 0;
+        padding: 0;
     }
 
-    header nav .order-button {
+    header nav .order-button,
+    header nav .call-button {
         display: none;
+        position: static;
+        width: 200px;
+        text-align: center;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    header nav ul.show ~ .order-button,
+    header nav ul.show ~ .call-button {
+        display: block;
     }
 
     .menu-toggle {
@@ -562,10 +597,6 @@ header nav .order-button:hover {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
         font-size: 1.2rem;
     }
 
@@ -603,7 +634,7 @@ header nav .order-button:hover {
         padding: 0 10px;
     }
 
-    .company-info h2 {
+    .company-info h1 {
         font-size: 2rem;
     }
 }
@@ -692,4 +723,55 @@ footer p {
 footer a {
     color: inherit;
     text-decoration: underline;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.hero-logo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.gdpr {
+    background-color: var(--bg-dark-color);
+    color: var(--white-color);
+    padding: 50px 0;
+}
+
+.gdpr .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.gdpr h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.gdpr h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--blue-color);
+}
+
+.gdpr ul {
+    margin-bottom: 20px;
+}
+
+.reservation-notice {
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
